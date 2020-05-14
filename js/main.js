@@ -107,7 +107,7 @@ var winsound = new Audio("./sounds/cash.mp3");
 var round = 0;
 function deal() {
   if (turnover == true) {
-    
+    round++;
     if(round < 5) {
       var ress = roundres();
       if (ress == "Winner") {
@@ -135,7 +135,7 @@ function deal() {
         document.getElementById("myresult").style.color = "white";
         document.getElementById("botresult").style.color = "white";
       }, 200);
-      round++;
+      
     } 
      else if(round == 5){
       setTimeout(function () {
