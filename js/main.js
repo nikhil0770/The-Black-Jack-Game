@@ -15,7 +15,7 @@ function hit() {
     updatemyscore(num);
   }
 }
-const hitsound = new Audio("/sounds/swish.m4a");
+const hitsound = new Audio("./sounds/swish.m4a");
 
 function updatemyscore(num) {
   myres = myres + num;
@@ -80,7 +80,7 @@ async function stand() {
 }
 function showcard(r, divf) {
   var cardimage = document.createElement("img");
-  cardimage.src = `/images/${r}.png`;
+  cardimage.src = `./images/${r}.png`;
   cardimage.style.width = "80px";
   cardimage.style.margin = "10px";
   document.querySelector(divf).appendChild(cardimage);
@@ -102,8 +102,8 @@ function updatebotscore(num) {
 var wt = 0;
 var lt = 0;
 var dt = 0;
-var losesound = new Audio("/sounds/aww.mp3");
-var winsound = new Audio("/sounds/cash.mp3");
+var losesound = new Audio("./sounds/aww.mp3");
+var winsound = new Audio("./sounds/cash.mp3");
 var round = 0;
 function deal() {
   if (turnover == true) {
