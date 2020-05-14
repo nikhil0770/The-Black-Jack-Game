@@ -108,7 +108,7 @@ var round = 0;
 function deal() {
   if (turnover == true) {
     round++;
-    if (round <= 5) {
+    while(round < 5) {
       var ress = roundres();
       if (ress == "Winner") {
         wt++;
@@ -135,6 +135,7 @@ function deal() {
         document.getElementById("myresult").style.color = "white";
         document.getElementById("botresult").style.color = "white";
       }, 200);
+      round++;
     } 
      
       setTimeout(function () {
