@@ -81,8 +81,8 @@ async function stand() {
 function showcard(r, divf) {
   var cardimage = document.createElement("img");
   cardimage.src = `./images/${r}.png`;
-  cardimage.style.width = "80px";
-  cardimage.style.margin = "10px";
+  cardimage.style.width = "40px";
+  cardimage.style.margin = "5px";
   document.querySelector(divf).appendChild(cardimage);
 }
 
