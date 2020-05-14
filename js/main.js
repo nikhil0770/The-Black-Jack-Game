@@ -136,7 +136,7 @@ function deal() {
         document.getElementById("botresult").style.color = "white";
       }, 200);
     } 
-     else if(round > 5){
+     
       setTimeout(function () {
         var di = document.querySelector("#subcont1").querySelectorAll("div");
         for (var j = 0; j < di.length; j++) {
@@ -164,7 +164,7 @@ function deal() {
       setTimeout(function () {
         window.location.reload();
       }, 777);
-    }
+    
     isStand = false;
   }
   turnover = false;
