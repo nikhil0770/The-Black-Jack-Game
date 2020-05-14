@@ -1,0 +1,35 @@
+#container {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+#subcont1,
+#subcont2 {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  background: darkgreen;
+}
+#subcont1 h3 {
+  color: white;
+}
+#subcont1 div {
+  border: 1px solid black;
+  padding: 10px;
+  height: 350px;
+  flex: 1;
+}
+#subcont2 button {
+  padding: 5px;
+  margin: 5px;
+}
+
+tr,
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+}

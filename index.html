@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Black Jack</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h2>The Black Jack</h2>
+      <h3><span id="resultdisp">Lets Play</span></h3>
+      <div id="subcont1">
+        <div id="mybox">
+          <h3>You: <span id="myresult">0</span></h3>
+        </div>
+        <div id="botbox">
+          <h3>Botscore: <span id="botresult">0</span></h3>
+        </div>
+      </div>
+      <div id="subcont2" style="background-color: black;">
+        <div>
+          <button class="btn-l btn-primary" id="hit">Hit</button>
+          <button class="btn-l btn-success" id="stand">Stand</button>
+          <button class="btn-l btn-danger" id="deal">Deal</button>
+        </div>
+      </div>
+      <div id="summary" style="padding: 10px;">
+        <table style="border: 1px solid black; margin: auto;">
+          <tr>
+            <th>Wins</th>
+            <th>Loses</th>
+            <th>Draws</th>
+          </tr>
+          <tr>
+            <td id="winsc">0</td>
+            <td id="losesc">0</td>
+            <td id="drawsc">0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="/js/main.js"></script>
+</html>
