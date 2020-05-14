@@ -108,7 +108,7 @@ var round = 0;
 function deal() {
   if (turnover == true) {
     round++;
-    if (round < 5) {
+    if (round < 4) {
       var ress = roundres();
       if (ress == "Winner") {
         wt++;
@@ -135,7 +135,7 @@ function deal() {
         document.getElementById("myresult").style.color = "white";
         document.getElementById("botresult").style.color = "white";
       }, 270);
-    } else if(round == 5){
+    } else if(round == 4){
       setTimeout(function () {
         var di = document.querySelector("#subcont1").querySelectorAll("div");
         for (var j = 0; j < di.length; j++) {
