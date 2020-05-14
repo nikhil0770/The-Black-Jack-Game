@@ -81,8 +81,8 @@ async function stand() {
 function showcard(r, divf) {
   var cardimage = document.createElement("img");
   cardimage.src = `./images/${r}.png`;
-  cardimage.style.width = "40px";
-  cardimage.style.margin = "5px";
+  cardimage.style.width = "50px";
+  cardimage.style.margin = "7px";
   document.querySelector(divf).appendChild(cardimage);
 }
 
@@ -108,7 +108,7 @@ var round = 0;
 function deal() {
   if (turnover == true) {
     round++;
-    if (round <= 4) {
+    if (round <= 5) {
       var ress = roundres();
       if (ress == "Winner") {
         wt++;
