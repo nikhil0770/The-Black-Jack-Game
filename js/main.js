@@ -134,7 +134,7 @@ function deal() {
         document.getElementById("resultdisp").style.color = "black";
         document.getElementById("myresult").style.color = "white";
         document.getElementById("botresult").style.color = "white";
-      }, 500);
+      }, 270);
     } else {
       setTimeout(function () {
         var di = document.querySelector("#subcont1").querySelectorAll("div");
