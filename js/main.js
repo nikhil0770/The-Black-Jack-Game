@@ -115,12 +115,12 @@ function deal() {
         document.getElementById("winsc").innerHTML = wt;
         winsound.play();
       }
-      if (ress == "Loss") {
+      else if (ress == "Loss") {
         lt++;
         document.getElementById("losesc").innerHTML = lt;
         losesound.play();
       }
-      if (ress == "draw") {
+      else if (ress == "draw") {
         dt++;
         document.getElementById("drawsc").innerHTML = dt;
       }
@@ -135,7 +135,7 @@ function deal() {
         document.getElementById("myresult").style.color = "white";
         document.getElementById("botresult").style.color = "white";
       }, 270);
-    } else {
+    } else if(round == 5){
       setTimeout(function () {
         var di = document.querySelector("#subcont1").querySelectorAll("div");
         for (var j = 0; j < di.length; j++) {
