@@ -134,9 +134,9 @@ function deal() {
         document.getElementById("resultdisp").style.color = "black";
         document.getElementById("myresult").style.color = "white";
         document.getElementById("botresult").style.color = "white";
-      }, 270);
+      }, 200);
     } 
-     else{
+     else if(round > 4){
       setTimeout(function () {
         var di = document.querySelector("#subcont1").querySelectorAll("div");
         for (var j = 0; j < di.length; j++) {
