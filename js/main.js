@@ -108,7 +108,7 @@ var round = 0;
 function deal() {
   if (turnover == true) {
     round++;
-    if (round <= 5) {
+    if (round < 5) {
       var ress = roundres();
       if (ress == "Winner") {
         wt++;
