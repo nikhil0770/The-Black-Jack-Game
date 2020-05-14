@@ -81,8 +81,8 @@ async function stand() {
 function showcard(r, divf) {
   var cardimage = document.createElement("img");
   cardimage.src = `./images/${r}.png`;
-  cardimage.style.width = "50px";
-  cardimage.style.margin = "7px";
+  cardimage.style.width = "80px";
+  cardimage.style.margin = "10px";
   document.querySelector(divf).appendChild(cardimage);
 }
 
@@ -108,19 +108,19 @@ var round = 0;
 function deal() {
   if (turnover == true) {
     round++;
-    if(round < 5) {
+    if (round <= 5) {
       var ress = roundres();
       if (ress == "Winner") {
         wt++;
         document.getElementById("winsc").innerHTML = wt;
         winsound.play();
       }
-      else if (ress == "Loss") {
+      if (ress == "Loss") {
         lt++;
         document.getElementById("losesc").innerHTML = lt;
         losesound.play();
       }
-      else if (ress == "draw") {
+      if (ress == "draw") {
         dt++;
         document.getElementById("drawsc").innerHTML = dt;
       }
@@ -134,37 +134,36 @@ function deal() {
         document.getElementById("resultdisp").style.color = "black";
         document.getElementById("myresult").style.color = "white";
         document.getElementById("botresult").style.color = "white";
-      }, 200);
-      
-    } 
-     else if(round == 5){
-      setTimeout(function () {
-        var di = document.querySelector("#subcont1").querySelectorAll("div");
-        for (var j = 0; j < di.length; j++) {
-          di[j].remove();
-        }
-        document.getElementById("subcont1").style.background = "black";
-        document.getElementById("subcont1").style.height = "350px";
-        if (wt > lt) {
-          document.getElementById("subcont1").innerHTML = "You Won !!";
-          document.getElementById("subcont1").style.color = "lightgreen";
-          document.getElementById("subcont1").style.alignItems = "center";
-          document.getElementById("subcont1").style.fontSize = "3em";
-        } else if (wt < lt) {
-          document.getElementById("subcont1").innerHTML = "You Lost !!";
-          document.getElementById("subcont1").style.color = "red";
-          document.getElementById("subcont1").style.alignItems = "center";
-          document.getElementById("subcont1").style.fontSize = "3em";
-        } else {
-          document.getElementById("subcont1").innerHTML = "You Drew !!";
-          document.getElementById("subcont1").style.color = "blue";
-          document.getElementById("subcont1").style.alignItems = "center";
-          document.getElementById("subcont1").style.fontSize = "3em";
-        }
-      }, 350);
-      setTimeout(function () {
-        window.location.reload();
-      }, 777);
+      }, 500);
+      if (round == 5) {
+        setTimeout(function () {
+          var di = document.querySelector("#subcont1").querySelectorAll("div");
+          for (var j = 0; j < di.length; j++) {
+            di[j].remove();
+          }
+          document.getElementById("subcont1").style.background = "black";
+          document.getElementById("subcont1").style.height = "350px";
+          if (wt > lt) {
+            document.getElementById("subcont1").innerHTML = "You Won !!";
+            document.getElementById("subcont1").style.color = "lightgreen";
+            document.getElementById("subcont1").style.alignItems = "center";
+            document.getElementById("subcont1").style.fontSize = "3em";
+          } else if (wt < lt) {
+            document.getElementById("subcont1").innerHTML = "You Lost !!";
+            document.getElementById("subcont1").style.color = "red";
+            document.getElementById("subcont1").style.alignItems = "center";
+            document.getElementById("subcont1").style.fontSize = "3em";
+          } else {
+            document.getElementById("subcont1").innerHTML = "You Drew !!";
+            document.getElementById("subcont1").style.color = "blue";
+            document.getElementById("subcont1").style.alignItems = "center";
+            document.getElementById("subcont1").style.fontSize = "3em";
+          }
+        }, 350);
+        setTimeout(function () {
+          window.location.reload();
+        }, 777);
+      }
     }
     isStand = false;
   }
